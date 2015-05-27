@@ -1,5 +1,8 @@
-<h1>Listing Latest Posts</h1>
-
+<head>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+</head>
+<hu> ALL POSTS </h1>
 <table>
   <thead>
     <tr>
@@ -16,7 +19,7 @@
         <td><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
