@@ -7,12 +7,12 @@
 <p>
   <%= @post.body %>
 </p>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Back', posts_path %>
 
 <h2> Comments </h2>
-<%= @post.comments.each do |comment| %>
-	<div id="Comments">
+<div id="Comments">
+	<%= @post.comments.each do |comment| %>	
 		<%= div_for comment do %>
 			<strong>
 				<%= h(comment.body) %>
@@ -21,9 +21,16 @@
 				<%= time_ago_in_words(comment.created_at) %>
 			</p>
 		<% end %>
-	</div>
-<% end %>
+	<% end %>
+</div>
 
-
-
-
+<div>
+	<%= form_for([@post, Comment.new]) do |f| %>
+		<p>
+			<%= f.text_area :body %>
+		</p>
+		<p>
+			<%= f.submit "Add Comment" %>
+		</p>
+	<% end %>
+</div>

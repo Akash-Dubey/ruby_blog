@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, except: [:show, :index]
 
   # GET /posts
   # GET /posts.json
@@ -72,3 +73,12 @@ class PostsController < ApplicationController
       params.require(:post).permit(:heading, :body)
     end
 end
+
+def authenticate
+  authenticate_or_request_with_http_basic do |username, password|
+    @user = User.all
+    username = @user[0].username && password = @user[0].password
+  end 
+end
+
+
