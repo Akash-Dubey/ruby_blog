@@ -12,7 +12,7 @@
 
 <h2> Comments </h2>
 <div id="Comments">
-	<%= @post.comments.each do |comment| %>	
+	<% @post.comments.each do |comment| %>	
 		<%= div_for comment do %>
 			<strong>
 				<%= h(comment.body) %>

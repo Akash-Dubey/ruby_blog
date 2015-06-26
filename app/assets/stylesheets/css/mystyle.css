@@ -1,0 +1,265 @@
+/* Reset body padding and margins */
+
+body {
+    margin:0;
+	background-color:rgb(196, 204, 207);
+    padding:0;
+}
+
+@media only screen and (max-width : 540px) 
+{
+    .chat-sidebar
+    {
+        display: none !important;
+    }
+    
+    .chat-popup
+    {
+        display: none !important;
+    }
+}
+
+/* Make Header Sticky */
+
+#plus_header_wrapper {
+
+    background-image: url('../images/background_header.jpg');
+
+    border:1px solid #666;
+
+    height:60px;
+
+    left:0;
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+}
+#plus_header_wrapper #plus_header {
+	max-width: 100%;
+}
+
+#plus_header {
+    width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+
+}
+
+#plus_header_wrapper .inner {
+	position: static;
+	width: 100%;
+	padding-left: 0.9375em;
+	padding-right: 0.9375em;
+	float: left;
+}
+
+#plus_header_wrapper .home {
+	display: block;
+	text-decoration: none;
+	margin-top: 9px;
+	float: left;
+}
+
+a {
+	background: transparent;
+}
+
+#plus_header_wrapper .home .logo {
+	width: 43px;
+	height: 43px;
+	float: left;
+	margin-right: 10px;
+	transition: all 0.2s linear;
+}
+
+#plus_header_wrapper .home h1 {
+	text-transform: uppercase;
+	padding-top: 7px;
+	font-size: 2.0em;
+	float: left;
+	font-weight: 900;
+	color: #fff;
+	transition: all 0.2s linear;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#plus_header_wrapper .home h1 span {
+	display: block;
+	font-weight: 400;
+	font-size: 0.28em;
+	color: #dff2fd;
+	transition: opacity 0.2s linear;
+}
+
+img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+/* CSS content*/
+
+#plus_content_wrapper {
+	
+	margin:0 auto;
+	
+    overflow:auto;
+
+    padding:15%;
+
+    width:940px;
+
+}
+
+#plus_content {
+
+}
+
+.chat-sidebar
+{
+
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    right: 0px;
+    top: 60px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(29, 49, 91, .3);
+}
+.chat-sidebar .nomessages {
+	background: #eee;
+	padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}   
+.chat-sidebar .scrollablearea {
+	overflow-y: auto;
+}       
+.sidebar-name 
+{	 
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.sidebar-name span{
+    padding-left: 5px;
+}
+
+.sidebar-name a
+{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-name:hover
+{
+    background-color:#e1e2e5;
+}
+
+.sidebar-name img
+{
+    width: 32px;
+    height: 32px;
+    vertical-align:middle;
+}         
+.popup-box
+{
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 220px;
+    height: 285px;
+    background-color: rgb(237, 239, 244);
+    width: 300px;
+    border: 1px solid rgba(29, 49, 91, .3);
+}
+
+.popup-box .popup-head
+{
+    background-color: #6d84b4;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    clear: both;
+}
+
+.popup-box .popup-head .popup-head-left
+{
+    float: left;
+}
+
+.popup-box .popup-head .popup-head-right
+{
+    float: right;
+    opacity: 0.5;
+}
+
+.popup-box .popup-head .popup-head-right a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.popup-box .popup-messages
+{
+    height: 100%;
+    overflow-y: scroll;
+}
+ .chat_history{
+	position:relative;
+	overflow-y:scroll;
+	height:200px;
+ }
+ .popup-box .popup-messages .typemessage {
+    position: fixed;
+ 	bottom: 0px;
+ 	width: 294px;
+ }         
+/* Make Footer Sticky */
+
+#plus_footer_wrapper {
+
+    background:#eee;
+
+    border:1px solid #666;
+
+    bottom:0;
+
+    height:0px;
+
+    left:0;
+
+    position:fixed;
+
+    width:100%;
+}
+
+#plus_footer {
+
+    line-height:20px;
+
+    margin:0 auto;
+
+    width:940px;
+
+    text-align:center;
+
+ }
+ 
